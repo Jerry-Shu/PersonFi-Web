@@ -17,3 +17,11 @@ export interface OutfitRecommendation {
     rationale: string;
     occasion?: string;
 }
+
+// Onboarding preferences captured during first-time setup
+export interface OnboardingPrefs {
+    styleIcon?: string; // e.g. Zendaya
+    favoriteColors: string[]; // simple color names
+    aesthetics: string[]; // e.g. Minimalist, Streetwear
+    wardrobePhotos: string[]; // object URLs for local previews
+}

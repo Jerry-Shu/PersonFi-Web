@@ -23,15 +23,15 @@ export default function Navbar({ tab, onChange }: NavbarProps) {
         return (
             <button
                 onClick={() => onChange(k)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-2xl transition
+                className={`flex items-center gap-3 px-5 py-3 rounded-2xl transition text-base leading-none
           ${active
                         ? "bg-white shadow text-zinc-900"
-                        : "text-zinc-500 hover:text-zinc-800"
+                        : "text-zinc-600 hover:text-zinc-800"
                     }`}
                 aria-current={active ? "page" : undefined}
             >
                 {icon}
-                <span className="hidden sm:block">{label}</span>
+                <span className="hidden sm:block font-medium">{label}</span>
             </button>
         );
     };
@@ -41,10 +41,10 @@ export default function Navbar({ tab, onChange }: NavbarProps) {
             <div className="container mx-auto max-w-4xl flex items-center justify-between p-3 sm:p-4">
                 <div className="font-semibold text-lg tracking-tight">PersonFi</div>
 
-                <nav className="flex gap-2">
-                    <NavItem k="wardrobe" icon={<Shirt size={18} />} label="Wardrobe" />
-                    <NavItem k="capture" icon={<Camera size={18} />} label="Add" />
-                    <NavItem k="match" icon={<Sparkles size={18} />} label="Match" />
+                <nav className="flex gap-3">
+                    <NavItem k="wardrobe" icon={<Shirt size={22} />} label="Wardrobe" />
+                    <NavItem k="capture" icon={<Camera size={22} />} label="Add" />
+                    <NavItem k="match" icon={<Sparkles size={22} />} label="Match" />
                 </nav>
             </div>
         </header>
